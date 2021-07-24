@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Add New Movie";
+}
+
+@if (ViewData["Added"] == null)
+{
+<div class="text-center">
+<h1>Add New Movie</h1>
+
+    <div class="form-group">
+<form method="post">
+<label>Title</label>
+<input class="form-control" type="text" name="title" />
+<br />
+
+<label>Release Year</label>
+<input class="form-control" type="text" name="release-year" />
+
+<label>Genre</label>
+<input class="form-control" type="text" name="genre" />
+
+<label>Rating</label>
+<input class="form-control" type="text" name="rating" />
+
+<label>Length</label>
+<input class="form-control" type="text" name="length" />
+
+ <input class="btn-outline-primary" type="submit" value="Add Movie" />
+    </form>
+        </div>
+    </div>
+}
+            else
+            {
+                <div class="alert alert-success">
+                    @ViewData["Added"]
+                </div>
+            }
